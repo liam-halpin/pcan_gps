@@ -3,10 +3,10 @@
 ## 1) Installing ROS Packages
 
 Ensure the following ROS packages are installed correctly:
-    * socketcan_bridge
-    * socketcan_interface
-    * can_msgs
-    * std_msgs
+* socketcan_bridge
+* socketcan_interface
+* can_msgs
+* std_msgs
 
 Some of these may come with your ROS installation, but if you wish to install them seperately, run the following command:
 

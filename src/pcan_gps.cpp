@@ -90,8 +90,8 @@ int main(int argc, char **argv) {
     pcan_data_sim.publish(sim_data);      // publish data to sent_messages (can_msgs/Frame)
 
 
-    // socketcan_bridge::TopicToSocketCAN::TopicToSocketCAN.setup("vcan0");     // transfer data from topic to 'vcan' device
-    // socketcan_bridge::SocketCANToTopic("vcan0");     // transfer data from 'vcan' device to topic
+    socketcan_bridge::TopicToSocketCAN::TopicToSocketCAN.setup("vcan0");     // transfer data from topic to 'vcan' device
+    socketcan_bridge::SocketCANToTopic("vcan0");     // transfer data from 'vcan' device to topic
     ros::Subscriber pcan_received = n.subscribe("messages", 10, valid_data);     // read data from topic and validate it
 
     ros::spin();

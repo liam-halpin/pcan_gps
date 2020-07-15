@@ -91,7 +91,7 @@ int main(int argc, char **argv) {
 
 
     socketcan_bridge::TopicToSocketCAN::TopicToSocketCAN.setup("vcan0");     // transfer data from topic to 'vcan' device
-    socketcan_bridge::SocketCANToTopic("vcan0");     // transfer data from 'vcan' device to topic
+    socketcan_bridge::SocketCANToTopic::SocketCANToTopic("vcan0");     // transfer data from 'vcan' device to topic
     ros::Subscriber pcan_received = n.subscribe("messages", 10, valid_data);     // read data from topic and validate it
 
     ros::spin();
